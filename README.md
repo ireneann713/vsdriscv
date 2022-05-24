@@ -72,7 +72,7 @@ Under the risc-v toolchain,
     
     Once done with installation add the PATH to .bashrc file for future use.
 
-Test Case for the above commands [(Summation of 1 to 5)](codes/sum.c),
+Test Case for the above commands [(Summation of 1 to 5)](Day1/sum.c),
 
   * Below image shows the disassembled file `sum1ton.o` with `main` function highlighted.
 ![image](https://user-images.githubusercontent.com/55539862/170091460-002cc21f-9186-454c-acb2-6ac499d10347.png)
