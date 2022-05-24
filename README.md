@@ -117,8 +117,7 @@ Test Case for ABI Call: [Summation of 1 to 9](codes/1to9_custom.c) through [asse
    
 
   * Below image shows 2 sections from [load.S](codes/load.S) (one is load and other is loop).
-
-    ![load_ABI](Images/load_ABI.png)
+    ![image](https://user-images.githubusercontent.com/55539862/170112340-a43f6559-ab0a-46a9-bfb0-d247b7e8c84f.png)
 
   * Below image shows the output of Summation from 1 to 9.
 
