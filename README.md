@@ -112,8 +112,9 @@ Test Case for ABI Call: [Summation of 1 to 9](codes/1to9_custom.c) through [asse
 
   * Below image shows the `main` function.
 
+    ![image](https://user-images.githubusercontent.com/55539862/170110000-84c30bf8-3458-4c0d-bccc-2c3051423976.png)
 
-    ![main_ABI](Images/main_ABI.png)
+   
 
   * Below image shows 2 sections from [load.S](codes/load.S) (one is load and other is loop).
 
