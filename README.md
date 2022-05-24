@@ -99,7 +99,7 @@ Test Case for the above commands [(Summation of 1 to 5)](Day1/sum.c),
 [(signedHighest)](Day1/signedHighest.c)
 ![image](https://user-images.githubusercontent.com/55539862/170097222-b436609b-2be9-4e75-aed5-2ef310812a8b.png)
 
-
+# Day2
 # Introduction to ABI
 
 An Application Binary Interface is a set of rules enforced by the Operating System on a specific architecture. So, Linker converts relocatable machine code to absolute machine code via ABI interface specific to the architecture of machine.
@@ -122,7 +122,66 @@ Test Case for ABI Call: [Summation of 1 to 9](codes/1to9_custom.c) through [asse
   * Below image shows the output of Summation from 1 to 5.
     ![image](https://user-images.githubusercontent.com/55539862/170112689-b46651db-375f-43fb-ad08-da449e13712c.png)
 
-   
+   ![image](https://user-images.githubusercontent.com/55539862/170114877-d36a6040-466c-4838-93f9-214aedaa43ef.png)
+## Lab 2 : To run and verify on a RISC-V Core
+  An RTL implementation of a RISC-V core has been provided to us and we run the above program using the scripts provided to using iverilog simulator, just to observe  the behaviour of the program in hardware. A similar core would be implemented by us in the forthcoming days.
+  
+  
+
+## How do we run the same program on RISC-V CPU
+
+This section contains sample program already written just to show the flow of how to run a program on a RISC-V CPU core.
+- We have a RISC-V CPU core written in Verilog and an already written testbench code for the same.
+- The entire C program will be converted into a hex format and and will be loaded into memory.
+- The CPU will then read the contents of the memory, process it and finally display the output result of sum of numbers from 1 to n.
+
+**Block Diagram to run C program on RISC-V CPU**
+
+
+### List of Commands:
+1. We clone the RISC-V workshop collaterals repository into our local machine:
+`$git clone https://github.com/kunalg123/riscv_workshop_collaterals.git`
+
+2. After downloading is complete, move inside the directory.
+`$cd riscv_workshop_collaterals`
+
+3. Move to the labs folder.
+`$cd labs`
+
+4. To list the contents of the directory, type : 
+`$ls -ltr`
+![image](https://user-images.githubusercontent.com/55539862/170115767-2515a8cb-1c14-447b-9d98-599cbf8268bd.png)
+
+
+
+5. To view the RISC-V CPU code (for picorv32) written in Verilog :
+`$vim picorv32.v` .  This contains the entire verilog netlist.
+
+6. To view the testbench file:
+`$vim testbench.v` .  This is where we read the hexfile. Scroll down to see the line : **$readmemh("firmware.hex",memory)**
+![image](https://user-images.githubusercontent.com/55539862/170116636-5e109d6d-7813-4fab-be8d-7cc870976a27.png)
+
+
+7. To view the standard script of how do we create the hex file :
+`$vim rv32im.sh` .  This file contains basically all the necessary set of scripts required to convert the C and Assembly code into hex file and load it into the memory, and then run it. 
+
+8. In order to run this shell script file, we have to change the read/write/execute permissions.
+`$chmod 777 rv32im.sh`
+
+9. To run the  script file, type :
+`./rv32im.sh`
+
+10. To view the internals of the firmware hex files:
+For 64-bit : `$vim firmware.hex`
+For 32-bit : `$vim firmware32.hex`  
+![image](https://user-images.githubusercontent.com/55539862/170117235-60477d86-6205-4d67-b863-ead303d2267f.png)
+
+These files shows how the application software is converted into bitstreams and this firmware file is loaded into the memory through the testbench. This file is then processed by the RISC-V core and finally it displays the output results.
+
+### Final Output snap of Day_2
+
+![image](https://user-images.githubusercontent.com/55539862/170117548-905123db-8079-46b1-8386-26e688fac025.png)
+
 # Digital Logic with TL-Verilog and Makerchip
 
 [Makerchip](https://makerchip.com/) is a free online environment for developing high-quality integrated circuits. You can code, compile, simulate, and debug Verilog designs, all from your browser. Your code, block diagrams, and waveforms are tightly integrated.
