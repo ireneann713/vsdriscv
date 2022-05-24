@@ -120,9 +120,9 @@ Test Case for ABI Call: [Summation of 1 to 9](codes/1to9_custom.c) through [asse
     ![image](https://user-images.githubusercontent.com/55539862/170112340-a43f6559-ab0a-46a9-bfb0-d247b7e8c84f.png)
 
   * Below image shows the output of Summation from 1 to 9.
+    ![image](https://user-images.githubusercontent.com/55539862/170112689-b46651db-375f-43fb-ad08-da449e13712c.png)
 
-    ![compile_ABI](Images/compile_ABI.png)
-
+   
 # Digital Logic with TL-Verilog and Makerchip
 
 [Makerchip](https://makerchip.com/) is a free online environment for developing high-quality integrated circuits. You can code, compile, simulate, and debug Verilog designs, all from your browser. Your code, block diagrams, and waveforms are tightly integrated.
