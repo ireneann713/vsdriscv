@@ -85,6 +85,19 @@ Test Case for the above commands [(Summation of 1 to 5)](Day1/sum.c),
 
     
     ![image](https://user-images.githubusercontent.com/55539862/170093480-b10637f1-b994-4f52-a65b-81f889b5b824.png)
+    
+   
+# Integer Number Representation
+
+## 64-bit Number System For Unsigned Numbers
+
+[(UnsignedHighest)](Day1/unsignedHighest.c)
+![image](https://user-images.githubusercontent.com/55539862/170096931-d515a400-f43d-4156-a32d-15542876ac32.png)
+
+
+## 64-bit Number System For Signed Numbers
+[(signedHighest)](Day1/signedHighest.c)
+![image](https://user-images.githubusercontent.com/55539862/170097222-b436609b-2be9-4e75-aed5-2ef310812a8b.png)
 
 
 # Introduction to ABI
