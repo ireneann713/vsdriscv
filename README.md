@@ -72,18 +72,20 @@ Under the risc-v toolchain,
     
     Once done with installation add the PATH to .bashrc file for future use.
 
-Test Case for the above commands [(Summation of 1 to 9)](codes/sum1ton.c),
+Test Case for the above commands [(Summation of 1 to 5)](codes/sum.c),
 
   * Below image shows the disassembled file `sum1ton.o` with `main` function highlighted.
 ![image](https://user-images.githubusercontent.com/55539862/170091460-002cc21f-9186-454c-acb2-6ac499d10347.png)
 
-    ![disassemble](Images/disassemble.png)
+    
 
   * To view the registers we can use command as `reg <core> <register name>`. 
 
     Below image shows how to debug the disassembled file using Spike simulator where a1,a2 register are checked before and after the instructions got executed.
 
-    ![spike_debug](Images/spike_debug.png)
+    
+    ![image](https://user-images.githubusercontent.com/55539862/170093480-b10637f1-b994-4f52-a65b-81f889b5b824.png)
+
 
 # Introduction to ABI
 
