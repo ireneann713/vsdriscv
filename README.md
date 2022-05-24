@@ -75,6 +75,7 @@ Under the risc-v toolchain,
 Test Case for the above commands [(Summation of 1 to 9)](codes/sum1ton.c),
 
   * Below image shows the disassembled file `sum1ton.o` with `main` function highlighted.
+![image](https://user-images.githubusercontent.com/55539862/170091460-002cc21f-9186-454c-acb2-6ac499d10347.png)
 
     ![disassemble](Images/disassemble.png)
 
@@ -96,6 +97,7 @@ So, it is system call interface used by the application program to access the re
 Test Case for ABI Call: [Summation of 1 to 9](codes/1to9_custom.c) through [assembly code](codes/load.S),
 
   * Below image shows the `main` function.
+
 
     ![main_ABI](Images/main_ABI.png)
 
