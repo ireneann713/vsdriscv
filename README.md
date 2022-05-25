@@ -202,7 +202,7 @@ Below is snapshot of Combinational Calculator.
 
 ![image](https://user-images.githubusercontent.com/55539862/170273193-de277a9e-0317-4f60-a707-6223fa56c9bf.png)
 
-## [Sequential logic](codes/Sequential_Calculator.tlv)
+## [Sequential logic]
 
 
 
@@ -214,6 +214,7 @@ Starting with basic example in sequential logic is Fibonacci Series with reset. 
 Below is snapshot of Sequential Calculator which remembers the last result, and uses it for the next calculation.
 
 ![Sequential-Calculator](Images/Sequential_Calculator.png)
+![image](https://user-images.githubusercontent.com/55539862/170290045-ba11ea20-2670-4cfa-902d-9133c1cd271d.png)
 
 ## [Pipelined logic](codes/Cycle_Calculator.tlv)
 
