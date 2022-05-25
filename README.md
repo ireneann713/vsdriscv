@@ -211,9 +211,10 @@ Starting with basic example in sequential logic is Fibonacci Series with reset. 
 ## 1. [Counter](Day3/Counter.v)
 ![image](https://user-images.githubusercontent.com/55539862/170286213-349fb881-532a-440d-a27e-a1456aa4b3ae.png)
 
-Below is snapshot of Sequential Calculator which remembers the last result, and uses it for the next calculation.
 
-![Sequential-Calculator](Images/Sequential_Calculator.png)
+
+## 2. [Sequential Calculator](Day3/Sequential_Calculator.v)
+Below is snapshot of Sequential Calculator which remembers the last result, and uses it for the next calculation.
 ![image](https://user-images.githubusercontent.com/55539862/170290045-ba11ea20-2670-4cfa-902d-9133c1cd271d.png)
 
 ## [Pipelined logic](codes/Cycle_Calculator.tlv)
