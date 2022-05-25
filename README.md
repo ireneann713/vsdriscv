@@ -202,7 +202,7 @@ Below is snapshot of Combinational Calculator.
 
 ![image](https://user-images.githubusercontent.com/55539862/170273193-de277a9e-0317-4f60-a707-6223fa56c9bf.png)
 
-## [Sequential logic]
+## Sequential logic
 
 
 
