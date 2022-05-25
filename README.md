@@ -188,10 +188,16 @@ These files shows how the application software is converted into bitstreams and 
 
 All the examples shown below are done on Makerchip IDE using TL-verilog. Also there are other tutorials present on IDE which can be found [here](https://makerchip.com/sandbox/) under Tutorials section.
 
-## [Combinational logic](Day3/CombinationalCalculator.tlv)
+## [Combinational logic]
 
 Starting with basic example in combinational logic is an inverter. To write the logic of inverter using TL-verilog is `$out = ! $in;`. There is no need to declare `$out` and `$in` unlike Verilog. There is also no need to assign `$in`. Random stimulus is provided, and a warning is produced. 
+  ### 1. [Full Adder](Day3/FullAdder.tlv)
+  
+![image](https://user-images.githubusercontent.com/55539862/170281859-4988981e-725f-4ff0-b9c7-c717476a5ec1.png)
 
+
+ ### 2. [Combinational Calculator](Day3/CombinationalCalculator.tlv)
+ 
 Below is snapshot of Combinational Calculator.
 
 ![image](https://user-images.githubusercontent.com/55539862/170273193-de277a9e-0317-4f60-a707-6223fa56c9bf.png)
