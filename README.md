@@ -217,13 +217,14 @@ Starting with basic example in sequential logic is Fibonacci Series with reset. 
 Below is snapshot of Sequential Calculator which remembers the last result, and uses it for the next calculation.
 ![image](https://user-images.githubusercontent.com/55539862/170290045-ba11ea20-2670-4cfa-902d-9133c1cd271d.png)
 
-## [Pipelined logic](codes/Cycle_Calculator.tlv)
+## [Pipelined logic](Day3/Cycle_Calculator.tlv)
 
 Timing abstract powerful feature of TL-Verilog which converts a code into pipeline stages easily. Whole code under `|pipe` scope with stages defined as `@?`
 
 Below is snapshot of 2-cycle calculator which clears the output alternatively and output of given inputs are observed at the next cycle.
 
-![Cycle-Calculator](Images/Cycle_Calculator.png)
+![image](https://user-images.githubusercontent.com/55539862/170309779-95b0bfa8-5e21-4290-9659-02d92158becb.png)
+
 
 ## [Validity](codes/Cycle_Calculator_Validity.tlv)
 
