@@ -232,7 +232,7 @@ Validity is TL-verilog means signal indicates validity of transaction and descri
 
 Below is snapshot of 2-cycle calculator with validity. 
 
-![Cycle-Calculator-Validity](Images/Cycle_Calculator_validity.png)
+![image](https://user-images.githubusercontent.com/55539862/170338671-9b0110b1-3172-451d-b3bf-bd013303c678.png)
 
 # Basic RISC-V CPU micro-architecture
 
