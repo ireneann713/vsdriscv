@@ -226,7 +226,7 @@ Below is snapshot of 2-cycle calculator which clears the output alternatively an
 ![image](https://user-images.githubusercontent.com/55539862/170309779-95b0bfa8-5e21-4290-9659-02d92158becb.png)
 
 
-## [Validity](codes/Cycle_Calculator_Validity.tlv)
+## [Validity](Day3/Cycle_Calculator_Validity.tlv)
 
 Validity is TL-verilog means signal indicates validity of transaction and described as "when" scope else it will work as don't care. Denoted as `?$valid`. Validity provides easier debug, cleaner design, better error checking, automated clock gating.
 
