@@ -204,7 +204,12 @@ Below is snapshot of Combinational Calculator.
 
 ## [Sequential logic](codes/Sequential_Calculator.tlv)
 
+
+
 Starting with basic example in sequential logic is Fibonacci Series with reset. To write the logic of Series using TL-Verilog is `$num[31:0] = $reset ? 1 : (>>1$num + >>2$num)`. This operator `>>?` is ahead of operator which will provide the value of that signal 1 cycle before and 2 cycle before respectively.
+
+## 1. [Counter](Day3/Counter.v)
+![image](https://user-images.githubusercontent.com/55539862/170286213-349fb881-532a-440d-a27e-a1456aa4b3ae.png)
 
 Below is snapshot of Sequential Calculator which remembers the last result, and uses it for the next calculation.
 
