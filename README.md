@@ -299,7 +299,7 @@ Below is snapshot from Makerchip IDE after performing the Execute Stage.
 
 ![image](https://user-images.githubusercontent.com/55539862/170557069-b68ec260-3bbd-4f26-ac05-e6ef816564d1.png)
 
-## [Control Logic](Day3_5/Branches.tlv)
+## [Control Logic](Day3_5/Branch.tlv)
 
 During Decode Stage, branch target address is calculated and fed into PC mux. Before Execute Stage, once the operands are ready branch condition is checked.
 
