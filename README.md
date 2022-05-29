@@ -188,7 +188,7 @@ These files shows how the application software is converted into bitstreams and 
 
 All the examples shown below are done on Makerchip IDE using TL-verilog. Also there are other tutorials present on IDE which can be found [here](https://makerchip.com/sandbox/) under Tutorials section.
 
-## [Combinational logic]
+## Combinational logic
 
 Starting with basic example in combinational logic is an inverter. To write the logic of inverter using TL-verilog is `$out = ! $in;`. There is no need to declare `$out` and `$in` unlike Verilog. There is also no need to assign `$in`. Random stimulus is provided, and a warning is produced. 
   ### 1. [Full Adder](Day3/FullAdder.tlv)
@@ -208,16 +208,16 @@ Below is snapshot of Combinational Calculator.
 
 Starting with basic example in sequential logic is Fibonacci Series with reset. To write the logic of Series using TL-Verilog is `$num[31:0] = $reset ? 1 : (>>1$num + >>2$num)`. This operator `>>?` is ahead of operator which will provide the value of that signal 1 cycle before and 2 cycle before respectively.
 
-## 1. [Counter](Day3/Counter.v)
+## 1. [Counter](Day3_5/Counter.v)
 ![image](https://user-images.githubusercontent.com/55539862/170286213-349fb881-532a-440d-a27e-a1456aa4b3ae.png)
 
 
 
-## 2. [Sequential Calculator](Day3/Sequential_Calculator.v)
+## 2. [Sequential Calculator](Day3_5/Sequential_Calculator.v)
 Below is snapshot of Sequential Calculator which remembers the last result, and uses it for the next calculation.
 ![image](https://user-images.githubusercontent.com/55539862/170290045-ba11ea20-2670-4cfa-902d-9133c1cd271d.png)
 
-## [Pipelined logic](Day3/Cycle_Calculator.tlv)
+## [Pipelined logic](Day3_5/Cycle_Calculator.tlv)
 
 Timing abstract powerful feature of TL-Verilog which converts a code into pipeline stages easily. Whole code under `|pipe` scope with stages defined as `@?`
 
@@ -226,19 +226,21 @@ Below is snapshot of 2-cycle calculator which clears the output alternatively an
 ![image](https://user-images.githubusercontent.com/55539862/170309779-95b0bfa8-5e21-4290-9659-02d92158becb.png)
 
 
-## [Validity](Day3/Cycle_Calculator_Validity.tlv)
+## [Validity](Day3_5/Cycle_Calculator_Validity.tlv)
 
 Validity is TL-verilog means signal indicates validity of transaction and described as "when" scope else it will work as don't care. Denoted as `?$valid`. Validity provides easier debug, cleaner design, better error checking, automated clock gating.
 
 Below is snapshot of 2-cycle calculator with validity. 
 
 ![image](https://user-images.githubusercontent.com/55539862/170338671-9b0110b1-3172-451d-b3bf-bd013303c678.png)
-
 # Basic RISC-V CPU micro-architecture
 
 Designing the basic processor of 3 stages fetch, decode and execute based on RISC-V ISA.
 
-## [Fetch](codes/Fetch.tlv)
+## [Next PC Logic](Day3_5/Next_PC.tlv)
+![image](https://user-images.githubusercontent.com/55539862/170537490-992a875a-7f7e-4b72-9d07-d80785495767.png)
+
+## [Fetch](Day3_5/Fetch.tlv)
 
 * Program Counter (PC): Holds the address of next Instruction
 * Instruction Memory (IM): Holds the set of instructions to be executed
@@ -246,10 +248,11 @@ Designing the basic processor of 3 stages fetch, decode and execute based on RIS
 During Fetch Stage, processor fetches the instruction from the IM pointed by address given by PC.
 
 Below is snapshot from Makerchip IDE after performing the Fetch Stage.
+![image](https://user-images.githubusercontent.com/55539862/170549506-7dcc03de-d888-4443-8b17-f46241f51a47.png)
 
-![Fetch](Images/Fetch.png)
 
-## [Decode](codes/Decode.tlv)
+
+## [Decode](Decode.tlv)
 
 6 types of Instructions:
   * R-type - Register 
@@ -262,10 +265,11 @@ Below is snapshot from Makerchip IDE after performing the Fetch Stage.
 Instruction Format includes Opcode, immediate value, source address, destination address. During Decode Stage, processor decodes the instruction based on instruction format and type of instruction.
 
 Below is snapshot from Makerchip IDE after performing the Decode Stage.
+![image](https://user-images.githubusercontent.com/55539862/170550428-23ac15d2-451d-4d63-b120-699e7481cf4e.png)
 
-![Decode](Images/Decode.png)
 
-## [Register File Read and Write](codes/Register_File_Read.tlv)
+
+## [Register File Read and Write](Day3_5/Register_File_Read.tlv)
 
 Here the Register file is 2 read, 1 write means 2 read and 1 write operation can happen simultanously.
 
@@ -283,32 +287,30 @@ Outputs:
 
 Below is snapshot from Makerchip IDE after performing the Register File Read followed by Register File Write.
 
-![Register-File-Read](Images/Register_File_Read.png)
+![image](https://user-images.githubusercontent.com/55539862/170552485-37f40413-7b42-4f31-977f-69784f1abdc9.png)
 
-![Register-File-Write](Images/Register_File_Write.png)
+![image](https://user-images.githubusercontent.com/55539862/170554784-f053a7c2-ca33-47ae-9f58-c530e17c4cae.png)
 
-
-## [Execute](codes/ALU.tlv)
+## [Execute](Day3_5/ALU.tlv)
 
 During the Execute Stage, both the operands perform the operation based on Opcode.
 
 Below is snapshot from Makerchip IDE after performing the Execute Stage.
 
-![Execute](Images/ALU.png)
+![image](https://user-images.githubusercontent.com/55539862/170557069-b68ec260-3bbd-4f26-ac05-e6ef816564d1.png)
 
-## [Control Logic](codes/Branches.tlv)
+## [Control Logic](Day3_5/Branches.tlv)
 
 During Decode Stage, branch target address is calculated and fed into PC mux. Before Execute Stage, once the operands are ready branch condition is checked.
 
 Below is snapshot from Makerchip IDE after including the control logic for branch instructions.
 
-![Control-logic](Images/Control_Logic.png)
-
+![image](https://user-images.githubusercontent.com/55539862/170557581-89513a5e-1a4d-4fbc-8a0a-4e8797446623.png)
 # Pipelined RISC-V CPU
 
 Converting non-piepleined CPU to pipelined CPU using timing abstract feature of TL-Verilog. This allows easy retiming wihtout any risk of funcational bugs. More details reagrding Timing Abstract in TL-Verilog can be found in IEEE Paper ["Timing-Abstract Circuit Design in Transaction-Level Verilog" by Steven Hoover.](https://ieeexplore.ieee.org/document/8119264)
 
-## [Pipelining the CPU](codes/Pipelining_the_CPU.tlv)
+## [Pipelining the CPU](Day3_5/Pipelining_the_CPU.tlv)
 
 Pipelining the CPU with branches still having 3 cycle delay rest all instructions are pipelined. Pipelining the CPU in TL-Verilog can be done in following manner:
 ```
@@ -325,10 +327,12 @@ Below is snapshot of pipelined CPU with a test case of assembly program which do
 ```
 *passed = |cpu/xreg[10]>>5$value == (1+2+3+4+5+6+7+8+9);
 ```
+![image](https://user-images.githubusercontent.com/55539862/170827725-85054bd4-23fd-4187-96b3-daea2108f835.png)
 
-![Pipelining_CPU](Images/Pipelining_CPU.png)
 
-## [Load and store instructions and memory](codes/Load_Store.tlv)
+
+
+## [Load and store instructions and memory](Day3_5/Load_Store.tlv)
 
 Similar to branch, load will also have 3 cycle delay. So, added a Data Memory 1 write/read memory.
 
@@ -347,15 +351,15 @@ Added test case to check fucntionality of load/store. Stored the summation of 1 
 ```
 Below is snapshot from Makerchip IDE after including load/store instructions.
 
-![Load_Store](Images/Load_Store.png)
-
-## [Completing the RISC-V CPU](codes/Final.tlv)
+![image](https://user-images.githubusercontent.com/55539862/170827669-395d0d5e-3fe8-4b11-9566-7fd8f8b5ad4f.png)
+## [Completing the RISC-V CPU](Day3_5/Final.tlv)
 
 Added Jumps and completed Instruction Decode and ALU for all instruction present in RV32I base integer instruction set.
 
 Below is final Snapshot of Complete Pipelined RISC-V CPU.
+![image](https://user-images.githubusercontent.com/55539862/170813939-8c0b30ad-16fb-4f54-b22b-d372f45cb7d1.png)
 
-![Final](Images/Final.png)
+
 
 # Acknowledgements
 - [Kunal Ghosh](https://github.com/kunalg123), Co-founder, VSD Corp. Pvt. Ltd.
