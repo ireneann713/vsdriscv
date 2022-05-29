@@ -20,7 +20,7 @@ This repository contains all the information needed to build your RISC-V pipelin
   - [Execute](#execute)
   - [Control Logic](#control-logic)
 - [Pipelined RISC-V CPU](#pipelined-risc-v-cpu)
-  - [Pipelinig the CPU](#pipelining-the-cpu)
+  - [Pipelining the CPU](#pipelining-the-cpu)
   - [Load and store instructions and memory](#load-and-store-instructions-and-memory)
   - [Completing the RISC-V CPU](#completing-the-risc-v-cpu)
 - [Acknowledgements](#acknowledgements)
