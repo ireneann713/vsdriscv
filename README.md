@@ -237,7 +237,7 @@ Below is snapshot of 2-cycle calculator with validity.
 
 Designing the basic processor of 3 stages fetch, decode and execute based on RISC-V ISA.
 
-## [Next PC Logic](Day3_5/Next_PC.tlv)
+## [Next PC Logic](Day3_5/Next_PC.v)
 ![image](https://user-images.githubusercontent.com/55539862/170537490-992a875a-7f7e-4b72-9d07-d80785495767.png)
 
 ## [Fetch](Day3_5/Fetch.tlv)
